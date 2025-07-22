@@ -3,14 +3,14 @@ package homepage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class Homepage {
 	WebDriver driver;
 
 	public WebDriver homepageLaunch() {
-		driver = new FirefoxDriver();
+		driver = new ChromeDriver();
 		String url = "https://demoqa.com/";
 		driver.get(url);
 		driver.manage().window().maximize();

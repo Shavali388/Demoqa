@@ -8,10 +8,12 @@ public class CheckBoxForm {
 	
 void checkbox(WebDriver driver)
 {
-	driver.findElement(By.xpath("(//span[@class='rct-text']/button)[1]")).click();
-	driver.findElement(By.xpath("(//span[@class='rct-text']/button)[2]")).click();
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("window.scrollBy(0,400)", "");
+	driver.findElement(By.xpath("(//span[@class='rct-text']/button)[1]")).click();
+	driver.findElement(By.xpath("(//span[@class='rct-text']/button)[2]")).click();
+
+	js.executeScript("window.scrollBy(0,300)", "");
 	driver.findElement(By.xpath("(//span[@class='rct-checkbox'])[3]")).click();
 	driver.findElement(By.xpath("(//span[@class='rct-text']/button)[3]")).click();
 	js.executeScript("window.scrollBy(0,200)", "");
